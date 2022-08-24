@@ -58,10 +58,10 @@
 
 
                 @if(session('success'))
-                      <div class="alrt alert-success">
-                      <i class="fa fa-check"><i/>
+                      <div class="alert alert-success">
+                      <i class="fa fa-check"></i>
                        {{session('success')}}
-                      </div>
+                     </div>
                 @endif
 
                 {{ $slot }}
