@@ -2,8 +2,8 @@
     <x-slot name="header">{{$quiz->title}} Quizine ait Sorular </x-slot>
     <div class="card">
         <div class="card-body">
+          <a href="{{route('questions.create',$quiz->id)}}" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i>Soru Oluştur</a>
             <h5 class="card-title">
-                <a href="{{route('quizzes.create',$quiz->id)}}" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i>Quiz Oluştur</a>
             </h5>
             <table class="table table-bordered table-sm">
                 <thead>
