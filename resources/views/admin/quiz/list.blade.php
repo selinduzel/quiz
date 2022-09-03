@@ -6,8 +6,7 @@
                 <a href="{{ route('quizzes.create') }}" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i>Quiz
                     Oluştur</a>
             </h5>
-            <form method ="GET" action=""n 
-            <form>
+            <form method ="GET" action="">
                 <div class="form-row">
                     <div class="col-md-2">
                         <input type="text" name="title" value="{{request()->get('title')}}" placeholder='Quiz Adı'class="form-control">
@@ -61,6 +60,10 @@
                                     {{ $quiz->finished_at ? $quiz->finished_at->diffForHumans() : '-' }}
                                 </span></td>
                             <td>
+                                <a href="{{ url('quiz/'.$quiz->slug) }}" class="btn btn-sm btn-info">
+                                    <i class="fa fa-book"></i>
+                                </a>
+
                                 <a href="{{ route('questions.index', $quiz->id) }}" class="btn btn-sm btn-warning">
                                     <i class="fa fa-question"></i>
                                 </a>
