@@ -60,7 +60,7 @@
                                     {{ $quiz->finished_at ? $quiz->finished_at->diffForHumans() : '-' }}
                                 </span></td>
                             <td>
-                                <a href="{{ url('quiz/'.$quiz->slug) }}" class="btn btn-sm btn-info">
+                                <a href="{{ url('quiz/detay/'.$quiz->slug) }}" class="btn btn-sm btn-info">
                                     <i class="fa fa-book"></i>
                                 </a>
 
