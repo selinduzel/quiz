@@ -23,7 +23,7 @@ protected $model=Answer::class;
     {
         return [
             'user_id'=>rand(1,10),
-            'question_id'=>rand(1,50),
+            'question_id'=>rand(1,100),
             'answer'=>'answer'.rand(1,4)
         ];
     }
