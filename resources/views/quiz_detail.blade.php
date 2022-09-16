@@ -9,7 +9,7 @@
                         @if ($quiz->my_rank)
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 Sıralama
-                                <span class="badge bg-success badge-pill">{{ $quiz->my_rank }}</span>
+                                <span class="badge bg-success badge-pill">#{{ $quiz->my_rank }}</span>
                             </li>
                         @endif
                         @if ($quiz->my_result)
