@@ -44,7 +44,14 @@
                             <td>
                                 @switch($quiz->status)
                                     @case('publish')
+
+                                  @if(!$quiz->finished_at)
                                         <span class="btn btn-success">Aktif</span>
+                                  @elseif($quiz->finished_at > now())
+                                        <span class="btn btn-success">Aktif</span>
+                                  @else
+                                        <span class="btn bg-secondary text-white">Süresi Bitti</span>
+                                  @endif
                                     @break
 
                                     @case('passive')
@@ -60,6 +67,10 @@
                                     {{ $quiz->finished_at ? $quiz->finished_at->diffForHumans() : '-' }}
                                 </span></td>
                             <td>
+                                <a href=" {{route('quizzes.details',$quiz->id)}} " class="btn btn-sm btn-secondary">
+                                    <i class="fa fa-info-circle"></i>
+                            
+                                </a>
                                 <a href="{{ url('quiz/detay/'.$quiz->slug) }}" class="btn btn-sm btn-info">
                                     <i class="fa fa-book"></i>
                                 </a>
